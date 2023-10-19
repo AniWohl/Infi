@@ -24,10 +24,12 @@ public class Würfelspiel {
             System.out.println("Computer " + winsOfComputer + " Player " + winsOfPlayer + " Draw " + amountOfDraws);
             if ( winsOfPlayer>winsOfComputer) {
                 System.out.println("player wins");
-            } else  {
+            } else   if ( winsOfPlayer<winsOfComputer) {
                 System.out.println("computer wins");
             }
-
+            else {
+                System.out.println("no one");
+            }
         }
 
 
