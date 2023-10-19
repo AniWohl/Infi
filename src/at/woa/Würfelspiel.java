@@ -22,7 +22,11 @@ public class Würfelspiel {
                 amountOfDraws++;
     }
             System.out.println("Computer " + winsOfComputer + " Player " + winsOfPlayer + " Draw " + amountOfDraws);
-
+            if ( winsOfPlayer>winsOfComputer) {
+                System.out.println("player wins");
+            } else  {
+                System.out.println("computer wins");
+            }
 
         }
 
