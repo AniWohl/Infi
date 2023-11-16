@@ -2,11 +2,11 @@ package at.woa;
 
 public class CaesarVerschluesselung {
     public static void main(String[] args) {
-        String result = encrypt( shift,  "hallo" );
+        String result = encrypt(int Shift:1, String stringToEncrypt: "hello")
     }
 
-    public static String encrypt(int shift, String stringToencrypt){
+    public static String encrypt(int shift, String stringToEncrypt){
 
-
+    return""
     }
 }
