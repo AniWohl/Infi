@@ -5,43 +5,37 @@ public class CaesarVerschluesselung {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Text hier eingeben:");
-        String stringToEncrypt = scanner.nextLine();
+        System.out.println("Text:");
+        String text = scanner.nextLine();
 
-        System.out.println("Verschiebungswert hier:");
+        System.out.println("Zahl (1-26):");
         int shift = scanner.nextInt();
 
+        if (shift < 1 || shift > 26) {
+            System.out.println("Nein, Nein, Nein, du Idiot, back to square one.");
+            shift = 1;
+        }
 
-        String result = encrypt(shift, stringToEncrypt);
+        String StringResult = StringResult (text, shift);
 
-        System.out.println("Der Cäsar Text: " + result);
-
+        System.out.println("Verschlüsselter Text: " + StringResult);
 
         scanner.close();
     }
 
-    public static String encrypt(int shift, String stringToEncrypt) {
-        char[] inputData = stringToEncrypt.toCharArray();
-        String encryptedString = "";
+    public static String StringResult(String text, int shift) {
+        StringBuilder StringResult = new StringBuilder();
 
-        for (int i = 0; i < inputData.length; i++) {
-
-            int letter = ((int) inputData[i]) + shift;
-
-
-            if (Character.isLetter(inputData[i])) {
-
-                if (Character.isUpperCase(inputData[i])) {
-
-                    letter = (letter - 'A') % 26 + 'A';
-                } else {
-
-                    letter = (letter - 'a') % 26 + 'a';
-                }
+        for (char zeichen : text.toCharArray()) {
+            if (Character.isLetter(zeichen)) {
+                char basis = Character.isUpperCase(zeichen) ? 'A' : 'a';
+                char verschluesselt = (char) (basis + (zeichen - basis + shift) % 26);
+                StringResult.append(verschluesselt);
+            } else {
+                StringResult.append(zeichen);
             }
-            encryptedString += (char) letter;
         }
 
-        return encryptedString;
+        return StringResult.toString();
     }
 }
