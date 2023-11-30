@@ -12,7 +12,7 @@ public class CaesarVerschluesselung {
         int shift = scanner.nextInt();
 
         if (shift < 1 || shift > 26) {
-            System.out.println("Nein, Nein, Nein, du Idiot, back to square one.");
+            System.out.println("Nein, Nein, Nein, back to square one.");
             shift = 1;
         }
 
