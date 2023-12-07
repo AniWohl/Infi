@@ -15,7 +15,9 @@ katze.setFarbe("Pink mit blauen Streifen");
 katze.setOberflaechenbeschaffenheit("flauschig");
 katze.setName("Petti");
 
-//System.out.println("Meine Katze "+katze.getName() + " ist " +katze.getAlter() + " Jahr alt!");
+Katze katze2 = new Katze ("nette","nackt","5","rosa","Sphinx");
+mKatzenListe.add(katze2);
+
 for(Katze k:mKatzenListe){
     System.out.println("Meine Katze "+k.getName() + " ist " +k.getAlter() + " Jahr alt!");
 }
