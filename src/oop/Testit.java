@@ -10,7 +10,7 @@ public class Testit {
         Katze katze = new Katze ();
         String[] charListe= {"bösartig","gutartig","listig","lieblich"};
         String[] oberflaechListe= {"nackt","flauschig","Kurzhaar","Fett"};
-        String[] alterListe= {3,2,1,4,9,5,6,7};
+        int[] alterListe= {3,2,1,4,9,5,6,7};
         String[] farbeListe= {"pink","blau","weiß","schwarz","grau","orange","braun","fleckig"};
         String[] nameListe= {"Sphinx","Snowflake","Luna","Honey","Dewy","Mort","Thanatos","Samael"};
         for (int i =1; i<=100; i++) {
