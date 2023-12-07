@@ -1,13 +1,18 @@
 package oop;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Testit {
     public static void main(String[]args){
-        ArrayList<Katze> mKatzenListe= new ArrayListe();
+        Random r =new Random();
+        ArrayList<Katze> mKatzenListe= new ArrayList();
         Katze katze = new Katze ();
+        String[] charListe= {"bösartig","gutartig","listig","lieblich"};
         for (int i =1; i<=100; i++) {
-            mKatzenListe.add(katze);
+
+            int ci = r.nextInt(charListe.length -1 - 0) + 0;
+            mKatzenListe.add(new Katze(charListe[0],"nette","nackt","5","rosa","Sphinx"));
         }
 katze.setAlter(1);
 katze.setCharakter("Schmussekater");
@@ -23,6 +28,4 @@ for(Katze k:mKatzenListe){
 }
     }
 
-    private static class ArrayListe extends ArrayList<Katze> {
-    }
 }
