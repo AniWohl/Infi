@@ -8,8 +8,8 @@ public class Testit {
         Random r =new Random();
         ArrayList<Katze> mKatzenListe= new ArrayList();
         Katze katze = new Katze ();
-        String[] charListe= {"bösartig","gutartig","listig","lieblich"};
-        String[] oberflaechListe= {"nackt","flauschig","Kurzhaar","Fett"};
+        String[] charListe= {"bösartige","gutartige","listige","liebliche"};
+        String[] oberflaechListe= {"nackte","flauschige","Kurzhaarige","Fette"};
         int[] alterListe= {3,2,1,4,9,5,6,7};
         String[] farbeListe= {"pink","blau","weiß","schwarz","grau","orange","braun","fleckig"};
         String[] nameListe= {"Sphinx","Snowflake","Luna","Honey","Dewy","Dewdrop","Thanatos","Samael", "Cake","Cinnamon"};
@@ -32,8 +32,8 @@ Katze katze2 = new Katze ("nette","nackt",5,"rosa","Sphinx");
 mKatzenListe.add(katze2);
 
 for(Katze k:mKatzenListe){
-    System.out.println("Meine Katze "+k.getName() + " ist " +k.getAlter() + " Jahre alt," +k.getCharakter() +" " +k.getFarbe()
-      +  " "    +k.getOberflaechenbeschaffenheit() + " Katze");
+    System.out.println("Meine Katze "+k.getName() + " ist " +k.getAlter() + " Jahre alt, sie ist eine " +k.getCharakter() +" " +k.getFarbe()
+    +"farbige"  +  " "    +k.getOberflaechenbeschaffenheit() + " Katze");
 }
     }
 
