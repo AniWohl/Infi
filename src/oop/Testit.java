@@ -12,7 +12,7 @@ public class Testit {
         String[] oberflaechListe= {"nackte","flauschige","Kurzhaarige","Fette"};
         int[] alterListe= {3,2,1,4,9,5,6,7};
         String[] farbeListe= {"pink","blau","weiß","schwarz","grau","orange","braun","fleckig"};
-        String[] nameListe= {"Sphinx","Snowflake","Luna","Honey","Dewy","Dewdrop","Thanatos","Samael", "Cake","Cinnamon"};
+        String[] nameListe= {"Sphinx","Snowflake","Luna","Honey","Dewy","Dewdrop","Cake","Cinnamon"};
         for (int i =1; i<=100; i++) {
 
             int ci = r.nextInt(charListe.length -1 - 0) + 0;
