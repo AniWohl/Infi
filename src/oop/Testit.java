@@ -9,7 +9,7 @@ public class Testit {
         ArrayList<Katze> mKatzenListe= new ArrayList();
         Katze katze = new Katze ();
         String[] charListe= {"bösartige","gutartige","listige","liebliche"};
-        String[] oberflaechListe= {"nackte","flauschige","Kurzhaarige","Fette", "tode"};
+        String[] oberflaechListe= {"nackte","flauschige","Kurzhaarige","fette","tode"};
         int[] alterListe= {3,2,1,4,9,5,6,7};
         String[] farbeListe= {"pink","blau","weiß","schwarz","grau","orange","braun","fleckig"};
         String[] nameListe= {"Sphinx","Snowflake","Luna","Honey","Dewy","Dewdrop","Cake","Cinnamon"};
