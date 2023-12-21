@@ -33,7 +33,7 @@ mKatzenListe.add(katze2);
 
 for(Katze k:mKatzenListe){
     System.out.println("Meine Katze "+k.getName() + " ist " +k.getAlter() + " Jahre alt, sie ist eine " +k.getCharakter() +" " +k.getFarbe()
-    +"farbige"  +  " "    +k.getOberflaechenbeschaffenheit() + " Katze");
+    +"farbige"  +  " "    +k.getOberflaechenbeschaffenheit() + " Katze.");
 }
     }
 
