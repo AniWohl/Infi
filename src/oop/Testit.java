@@ -28,7 +28,7 @@ katze.setFarbe("Pink mit blauen Streifen");
 katze.setOberflaechenbeschaffenheit("flauschig");
 katze.setName("Petti");
 
-Katze katze2 = new Katze ("nette","nackt",5,"rosa","Sphinx");
+Katze katze2 = new Katze ("nette","nackte",5,"rosa","Sphinx");
 mKatzenListe.add(katze2);
 
 for(Katze k:mKatzenListe){
