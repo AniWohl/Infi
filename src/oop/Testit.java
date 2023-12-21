@@ -12,7 +12,7 @@ public class Testit {
         String[] oberflaechListe= {"nackt","flauschig","Kurzhaar","Fett"};
         int[] alterListe= {3,2,1,4,9,5,6,7};
         String[] farbeListe= {"pink","blau","weiß","schwarz","grau","orange","braun","fleckig"};
-        String[] nameListe= {"Sphinx","Snowflake","Luna","Honey","Dewy","Mort","Thanatos","Samael"};
+        String[] nameListe= {"Sphinx","Snowflake","Luna","Honey","Dewy","Dewdrop","Thanatos","Samael", "Cake","Cinnamon"};
         for (int i =1; i<=100; i++) {
 
             int ci = r.nextInt(charListe.length -1 - 0) + 0;
@@ -33,7 +33,7 @@ mKatzenListe.add(katze2);
 
 for(Katze k:mKatzenListe){
     System.out.println("Meine Katze "+k.getName() + " ist " +k.getAlter() + " Jahre alt," +k.getCharakter() +" " +k.getFarbe()
-            +k.getOberflaechenbeschaffenheit());
+      +  " "    +k.getOberflaechenbeschaffenheit() + " Katze");
 }
     }
 
