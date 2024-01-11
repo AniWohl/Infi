@@ -30,7 +30,8 @@ katze.setName("Petti");
 
 Katze katze2 = new Katze ("nette","nackte",5,"rosa","Sphinx");
 mKatzenListe.add(katze2);
-Haus haus = new Haus ( 350, "Buxdehude 4, 88732", 8);
+Haus haus = new Haus ( 350, "Buxdehude 4, 88732", 8, 5);
+Haus haus2 = new Haus ( 400, "FU 3 6969", 10, 8);
 haus.getInfo();
 
 
@@ -40,7 +41,7 @@ for(Katze k:mKatzenListe){
 
     haus.addKatze(k);
 }
+        haus.getKatzenImHaus();
     }
-haus.addKatze(katze2);
-haus.getKatzenImHaus();
+
 }

@@ -6,13 +6,23 @@ public class Haus {
     private int flaeche;
     private String adresse;
     private int anzahlZimmer;
+    private int maxkatzenimhaus;
     private ArrayList<Katze> katzenliste;
 
-    public Haus(int flaeche, String adresse, int anzahlZimmer) {
+    public int getMaxkatzenimhaus() {
+        return maxkatzenimhaus;
+    }
+
+    public void setMaxkatzenimhaus(int maxkatzenimhaus) {
+        this.maxkatzenimhaus = maxkatzenimhaus;
+    }
+
+    public Haus(int flaeche, String adresse, int anzahlZimmer, int maxkatzenimhaus) {
         this.flaeche = flaeche;
         this.adresse = adresse;
         this.anzahlZimmer = anzahlZimmer;
         this.katzenliste = new ArrayList<>();
+        this.maxkatzenimhaus = maxkatzenimhaus;
     }
 
     public int getFlaeche() {
