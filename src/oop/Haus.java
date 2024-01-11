@@ -63,7 +63,7 @@ public class Haus {
     }
 
     public void addKatze(Katze katze) {
-        if (katzenliste.size() > this.maxkatzenimhaus) {
+        if (katzenliste.size() >= this.maxkatzenimhaus) {
             System.out.println("Der/Die ChefIn will nicht mehr Katzen als " + this.maxkatzenimhaus + " im Haus!!");
         } else {
             katzenliste.add(katze);
