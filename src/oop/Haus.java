@@ -38,4 +38,18 @@ public class Haus {
     public void setAnzahlZimmer(int anzahlZimmer) {
         this.anzahlZimmer = anzahlZimmer;
     }
+
+    public void getInfo () {
+        System.out.println("Adresse " + this.adresse + "\nFlaeche:" + this.flaeche + "\nAnzahl der Zimmer:" + this.anzahlZimmer);
+    }
+
+    public void addKatze(Katze katze) {
+        katzenliste.add(katze);
+    }
+
+    public void getKatzenImHaus(){
+        for (Katze k : katzenliste) {
+            k.getInfo();
+        }
+    }
 }

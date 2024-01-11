@@ -30,11 +30,17 @@ katze.setName("Petti");
 
 Katze katze2 = new Katze ("nette","nackte",5,"rosa","Sphinx");
 mKatzenListe.add(katze2);
+Haus haus = new Haus ( 350, "Buxdehude 4, 88732", 8);
+haus.getInfo();
+
 
 for(Katze k:mKatzenListe){
     System.out.println("Meine Katze "+k.getName() + " ist " +k.getAlter() + " Jahre alt, sie ist eine " +k.getCharakter() +" " +k.getFarbe()
     +"farbige"  +  " "    +k.getOberflaechenbeschaffenheit() + " Katze.");
+
+    haus.addKatze(k);
 }
     }
-
+haus.addKatze(katze2);
+haus.getKatzenImHaus();
 }
