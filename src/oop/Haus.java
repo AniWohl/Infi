@@ -54,12 +54,15 @@ public class Haus {
     }
 
     public void addKatze(Katze katze) {
-        katzenliste.add(katze);
-    }
+        if (katzenliste.size() > this.maxkatzenimhaus) {
+            System.out.println("Der/Die ChefIn will nicht mehr Katzen als " + this.maxkatzenimhaus + " im Haus!!");
+        } else {
+            katzenliste.add(katze);
+        }
 
-    public void getKatzenImHaus(){
-        for (Katze k : katzenliste) {
-            k.getInfo();
+    } public void getKatzenImHaus() {
+            for (Katze k : katzenliste) {
+                k.getInfo();
+            }
         }
     }
-}
