@@ -7,14 +7,23 @@ public class Haus {
     private String adresse;
     private int anzahlZimmer;
     private int maxkatzenimhaus;
+
+    private int maxkatzenalter;
     private ArrayList<Katze> katzenliste;
 
     public int getMaxkatzenimhaus() {
         return maxkatzenimhaus;
     }
+    public int getMaxkatzenalter() {
+        return maxkatzenalter;
+    }
 
     public void setMaxkatzenimhaus(int maxkatzenimhaus) {
         this.maxkatzenimhaus = maxkatzenimhaus;
+
+    }
+    public void setmaxkatzenalter(int maxkatzenalter) {
+        this.maxkatzenalter = maxkatzenalter;
     }
 
     public Haus(int flaeche, String adresse, int anzahlZimmer, int maxkatzenimhaus) {
