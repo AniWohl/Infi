@@ -5,20 +5,20 @@ import java.util.Random;
 public class Testit {
     public static void main(String[]args){
         Random r =new Random();
-        ArrayList<Katze> mKatzenListe= new ArrayList();
-        Katze katze = new Katze ();
-        String[] charListe= {"bösartige","gutartige","listige","liebliche"};
-        String[] oberflaechListe= {"nackte","flauschige","Kurzhaarige","tode"};
-        int[] alterListe= {3,2,1,4,9,5,6,7};
-        String[] farbeListe= {"pink","blau","weiß","schwarz","grau","orange","braun","fleckig"};
-        String[] nameListe= {"Sphinx","Snowflake","Luna","Honey","Dewy","Dewdrop","Cake","Cinnamon"};
+        ArrayList<Buch> mKBuchListe= new ArrayList();
+        Buch buch = new Buch ();
+        String[] GenreListe= {"bösartige","gutartige","listige","liebliche"};
+        String[] AutorListe= {"nackte","flauschige","Kurzhaarige","tode"};
+        int[] SeitenanzahlListe= {3,2,1,4,9,5,6,7};
+        String[] TitelListe= {"pink","blau","weiß","schwarz","grau","orange","braun","fleckig"};
+        String[] JahrListe= {"Sphinx","Snowflake","Luna","Honey","Dewy","Dewdrop","Cake","Cinnamon"};
         for (int i =1; i<=100; i++) {
 
-            int ci = r.nextInt(charListe.length -1 - 0) + 0;
-            int ni = r.nextInt(oberflaechListe.length -1 - 0) + 0;
-            int fi = r.nextInt(alterListe.length -1 - 0) + 0;
-            int oi = r.nextInt(farbeListe.length -1 - 0) + 0;
-            int ai = r.nextInt(nameListe.length -1 - 0) + 0;
+            int ci = r.nextInt(GenreListe.length -1 - 0) + 0;
+            int ni = r.nextInt(AutorListe.length -1 - 0) + 0;
+            int fi = r.nextInt(SeitenanzahlListe.length -1 - 0) + 0;
+            int oi = r.nextInt(TitelListe.length -1 - 0) + 0;
+            int ai = r.nextInt(JahrListe.length -1 - 0) + 0;
             mKatzenListe.add(new Katze(charListe[ci],oberflaechListe[ni],alterListe[fi],farbeListe[oi],nameListe[ai]));
         }
         katze.setAlter(1);
