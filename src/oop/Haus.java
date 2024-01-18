@@ -62,7 +62,7 @@ public class Haus {
         System.out.println("Adresse " + this.adresse + "\nFlaeche:" + this.flaeche + "\nAnzahl der Zimmer:" + this.anzahlZimmer);
     }
 
-    public void addKatze(Katze katze) {
+    public void addKatze(Katze katze) { //
         if (katzenliste.size() >= this.maxkatzenimhaus) {
             System.out.println("Der/Die ChefIn will nicht mehr Katzen als " + this.maxkatzenimhaus + " im Haus!!");
         } else {
