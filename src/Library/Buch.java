@@ -7,7 +7,10 @@ public class Buch {
         private String Titel;
         private String Jahr;
 
+
+    public Buch() {
     }
+
     public Buch(String titel, String autor, int seiten, String genre, int jahr) {
         this.Genre = Genre;
         this.Autor = Autor;
@@ -61,3 +64,4 @@ public class Buch {
                 + this.Titel + " und ist insgesamt " + this.Seitenanzahl + " lang. Es erschien " + this.Jahr);
     }
 }
+

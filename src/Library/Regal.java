@@ -22,16 +22,16 @@ public class Regal {
         this.MaxBuchRegal = MaxBuchRegal;
 
     }
-    public void setmaxkatzenalter(int maxkatzenalter) {
-        this.maxkatzenalter = maxkatzenalter;
+    public void setMaxSeiten(int maxSeiten) {
+        this.maxSeiten = maxSeiten;
     }
 
-    public Haus(int flaeche, String adresse, int anzahlZimmer, int maxkatzenimhaus) {
-        this.flaeche = flaeche;
-        this.adresse = adresse;
-        this.anzahlZimmer = anzahlZimmer;
-        this.katzenliste = new ArrayList<>();
-        this.maxkatzenimhaus = maxkatzenimhaus;
+    public Regal(int Platz, String Ort, int anzahlRegale, int maxBuch, int maxSeiten) {
+        this.Platz = PLatz;
+        this.Ort = Ort;
+        this.anzahlRegale = anzahlRegale;
+        this.maxBuch = new ArrayList<>();
+        this.maxBuch = maxkatzenimhaus;
     }
 
     public int getFlaeche() {
