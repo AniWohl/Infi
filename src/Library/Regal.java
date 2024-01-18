@@ -14,12 +14,12 @@ public class Regal {
     public int getMaxBuchRegal() {
         return MaxBuchRegal;
     }
-    public int getMaxkatzenalter() {
-        return maxkatzenalter;
+    public int getMaxSeiten() {
+        return getMaxSeiten();
     }
 
-    public void setMaxkatzenimhaus(int maxkatzenimhaus) {
-        this.maxkatzenimhaus = maxkatzenimhaus;
+    public void setMaxBuchRegal(int MaxBuchRegal) {
+        this.MaxBuchRegal = MaxBuchRegal;
 
     }
     public void setmaxkatzenalter(int maxkatzenalter) {
