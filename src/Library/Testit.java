@@ -40,7 +40,7 @@ public class Testit {
 
             Buch.addbuch(k);
         }
-        buch.getBuchRegal();
+        buch.getMaxBuchRegal();
     }
 
 }

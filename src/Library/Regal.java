@@ -8,11 +8,11 @@ public class Regal {
     private int anzahlRegale;
     private int maxBuch;
 
-    private int maxkatzenalter;
-    private ArrayList<Katze> katzenliste;
+    private int maxSeiten;
+    private ArrayList<Buch> buchliste;
 
-    public int getMaxkatzenimhaus() {
-        return maxkatzenimhaus;
+    public int getMaxBuchRegal() {
+        return MaxBuchRegal;
     }
     public int getMaxkatzenalter() {
         return maxkatzenalter;
