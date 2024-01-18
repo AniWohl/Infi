@@ -1,8 +1,5 @@
 package Library;
 
-import oop.Haus;
-import oop.Katze;
-
 import java.util.ArrayList;
 import java.util.Random;
 public class Testit {
