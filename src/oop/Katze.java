@@ -7,6 +7,8 @@ public class Katze {
     private String farbe;
     private String name;
 
+
+
     public Katze() {
     }
 
