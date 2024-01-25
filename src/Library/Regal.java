@@ -15,14 +15,15 @@ public class Regal {
     public int getMaxBuchRegal() {
         return MaxBuchRegal;
     }
+
     public int getMaxSeiten() {
-        return getMaxSeiten();
+        return maxSeiten;
     }
 
     public void setMaxBuchRegal(int MaxBuchRegal) {
         this.MaxBuchRegal = MaxBuchRegal;
-
     }
+
     public void setMaxSeiten(int maxSeiten) {
         this.maxSeiten = maxSeiten;
     }
@@ -31,8 +32,9 @@ public class Regal {
         this.Platz = Platz;
         this.Ort = Ort;
         this.anzahlRegale = anzahlRegale;
-        this.maxBuch = new ArrayList<>();
-        this.maxBuchRegal = maxBuchRegal;
+        this.maxBuch = maxBuch;  // Use the parameter instead of initializing with new Buch().getSeitenanzahl()
+        this.maxSeiten = maxSeiten;  // Initialize the maxSeiten field
+        this.buchliste = new ArrayList<>();  // Initialize the buchliste ArrayList
     }
 
     public int getPlatz() {
@@ -59,15 +61,15 @@ public class Regal {
         this.anzahlRegale = anzahlRegale;
     }
 
-    public void getInfo () {
-        System.out.println("Ort " + this.adresse + "\nPlatz:" + this.flaeche + "\nAnzahl der Regale:" + this.anzahlZimmer);
+    public void getInfo() {
+        System.out.println("Ort " + this.Ort + "\nPlatz:" + this.Platz + "\nAnzahl der Regale:" + this.anzahlRegale);
     }
 
     public void addBuch(Buch buch) {
-        if (Buchliste.size() >= this.setMaxBuchRegal()) {
-            System.out.println("Das Buchregal hält nicht mehr als " + this.maxkatzenimhaus + " aus");
+        if (this.MaxBuchRegal <= buchliste.size()) {
+            buchliste.add(buch);
         } else {
-            Buchliste.add(buch);
+            System.out.println("Das Buchregal hält nicht mehr als " + this.MaxBuchRegal + " aus");
         }
     }
 

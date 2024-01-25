@@ -8,7 +8,7 @@ public class Buch {
         private String Jahr;
 
 
-    public Buch() {
+    public Buch(String titel, String autor, int seiten, String genre, String s) {
     }
 
     public Buch(String titel, String autor, int seiten, String genre, int jahr) {
