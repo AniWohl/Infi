@@ -29,7 +29,7 @@ public class Testit {
             mBuchListe.add(newBuch);
         }
 
-        Buch buch = new Buch("MDZS", "STH", 3, "Fanfiction", "1900");
+        Buch buch = new Buch("MDZS", "STH", 3, "Fanfiction", "1900", maxBuchRegal: 8);
         mBuchListe.add(buch);
 
         Regal regal = new Regal(400, "FU 3 6969", 10, 8, 100);
