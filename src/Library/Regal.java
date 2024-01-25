@@ -62,14 +62,15 @@ public class Regal {
         System.out.println("Ort " + this.adresse + "\nPlatz:" + this.flaeche + "\nAnzahl der Regale:" + this.anzahlZimmer);
     }
 
-    public void addBuch (Buch buch) { //
-        if (Buchliste.size() >= this.setMaxBuchRegal()); {
-            System.out.println("Das Buchregal haltet nicht mehr al " + this.maxkatzenimhaus + " aus");
+    public void addBuch(Buch buch) {
+        if (Buchliste.size() >= this.setMaxBuchRegal()) {
+            System.out.println("Das Buchregal hält nicht mehr als " + this.maxkatzenimhaus + " aus");
         } else {
             Buchliste.add(buch);
         }
+    }
 
-    } public void getBuch() {
+    public void getBuch() {
         for (Buch k : buchliste) {
             k.getInfo();
         }
