@@ -12,6 +12,9 @@ public class Regal {
     private ArrayList<Buch> buchliste;
     private int MaxBuchRegal;
 
+    public Regal(int platz, String ort, int anzahlRegale, int maxBuch) {
+    }
+
     public int getMaxBuchRegal() {
         return MaxBuchRegal;
     }

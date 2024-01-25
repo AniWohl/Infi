@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import static Library.Buch.*;
+import static Library.Regal.*;
 
 public class Testit {
     private static Buch buch;
@@ -12,8 +13,9 @@ public class Testit {
     private static int fi;
     private static int oi;
     private static int ai;
+    private String Genre;
 
-    public static void main(String[]args) {
+    public void main(String[] args) {
         Random r = new Random();
         ArrayList<Buch> mBuchListe = new ArrayList();
         String[] GenreListe = new String[0];
@@ -41,9 +43,7 @@ public class Testit {
         Buch buch2 = new Buch("nette", "nackte", 5, "rosa", "Sphinx");
         mBuchListe.add(buch2);
         int maxkatzenalter;
-        Regal regal = new Regal(350, "Buxdehude 4, 88732", 8, 5, maxkatzenalter >= 5);
-        Regal regal2 = new Regal(400, "FU 3 6969", 10, 8);
-        Regal.getInfo();
+        Regal regal = new Regal(400, "FU 3 6969", 10, 8);
 
 
         for (Buch k : mBuchListe) {
