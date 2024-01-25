@@ -27,50 +27,50 @@ public class Regal {
     }
 
     public Regal(int Platz, String Ort, int anzahlRegale, int maxBuch, int maxSeiten) {
-        this.Platz = PLatz;
+        this.Platz = Platz;
         this.Ort = Ort;
         this.anzahlRegale = anzahlRegale;
         this.maxBuch = new ArrayList<>();
-        this.maxBuch = maxkatzenimhaus;
+        this.maxBuchRegal = maxBuchRegal;
     }
 
-    public int getFlaeche() {
-        return flaeche;
+    public int getPlatz() {
+        return Platz;
     }
 
-    public void setFlaeche(int flaeche) {
-        this.flaeche = flaeche;
+    public void setPlatz(int Platz) {
+        this.Platz = Platz;
     }
 
-    public String getAdresse() {
-        return adresse;
+    public String getOrt() {
+        return Ort;
     }
 
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
+    public void setOrt(String Ort) {
+        this.Ort = Ort;
     }
 
-    public int getAnzahlZimmer() {
-        return anzahlZimmer;
+    public int getanzahlRegale() {
+        return anzahlRegale;
     }
 
-    public void setAnzahlZimmer(int anzahlZimmer) {
-        this.anzahlZimmer = anzahlZimmer;
+    public void setanzahlRegale(int anzahlRegale) {
+        this.anzahlRegale = anzahlRegale;
     }
 
     public void getInfo () {
-        System.out.println("Adresse " + this.adresse + "\nFlaeche:" + this.flaeche + "\nAnzahl der Zimmer:" + this.anzahlZimmer);
+        System.out.println("Ort " + this.adresse + "\nPlatz:" + this.flaeche + "\nAnzahl der Regale:" + this.anzahlZimmer);
     }
 
-    public void addKatze(Katze katze) { //
-        if (katzenliste.size() >= this.maxkatzenimhaus) {
-            System.out.println("Der/Die ChefIn will nicht mehr Katzen als " + this.maxkatzenimhaus + " im Haus!!");
+    public void addBuch (Buch buch) { //
+        if (Buchliste.size() >= this.setMaxBuchRegal()); {
+            System.out.println("Das Buchregal haltet nicht mehr al " + this.maxkatzenimhaus + " aus");
         } else {
-            katzenliste.add(katze);
+            Buchliste.add(buch);
         }
 
-    } public void getKatzenImHaus() {
-        for (Katze k : katzenliste) {
+    } public void getBuch() {
+        for (Buch k : buchliste) {
             k.getInfo();
         }
     }
