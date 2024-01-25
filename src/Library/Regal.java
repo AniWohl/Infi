@@ -65,11 +65,12 @@ public class Regal {
     }
 
     public void addBuch(Buch buch) {
-        if (this.maxBuchRegal <= buchliste.size()) {
+        if (buchliste.size() <= this.maxBuchRegal) {
             buchliste.add(buch);
         } else {
             System.out.println("Das Buchregal hält nicht mehr als " + this.maxBuchRegal + " aus");
         }
+
     }
 
     public void getBuch() {

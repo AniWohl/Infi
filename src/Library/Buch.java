@@ -17,8 +17,8 @@ public class Buch {
         this.Jahr = jahr;
     }
 
-    public void addbuch(Buch book, ArrayList<Buch> bookCollection) {
-        bookCollection.add(book);
+    public void addbuch(Buch buch, ArrayList<Buch> buchliste) {
+        buchliste.add(buch);
     }
 
     public String getGenre() {
@@ -68,7 +68,6 @@ public class Buch {
     }
 
     public int getMaxBuchRegal() {
-        // Placeholder implementation; you need to define how to get the maximum allowed books in a shelf
         return 0;
     }
 }
