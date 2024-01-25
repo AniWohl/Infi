@@ -24,7 +24,8 @@ public class Testit {
         }
 
         Buch buch = new Buch("MDZS", "STH", 3, "Fanfiction", "1900");
-        Regal regal = new Regal(400, "FU 3 6969", 10, 8, 100);
+  Regal regal = new Regal(400, "FU 3 6969", 10, 8, 100);
+
         regal.getInfo();
 
         if (mBuchListe.size() < regal.getMaxBuchRegal()) {

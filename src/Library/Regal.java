@@ -8,8 +8,9 @@ public class Regal {
     private int anzahlRegale;
     private int maxBuch;
     private int maxSeiten;
-    private ArrayList<Buch> buchliste;
     private int maxBuchRegal;
+    private ArrayList<Buch> buchliste;
+
 
     public Regal(int platz, String ort, int anzahlRegale, int maxBuch, int maxSeiten) {
         this.platz = platz;
