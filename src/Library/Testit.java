@@ -4,18 +4,12 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Testit {
-    private static int ci;
-    private static int ni;
-    private static int fi;
-    private static int oi;
-    private static int ai;
-
     public static void main(String[] args) {
         Random r = new Random();
         ArrayList<Buch> mBuchListe = new ArrayList<>();
         String[] GenreListe = {"Danmei", "Fantasy", "Horror", "Detektive"};
         String[] AutorListe = {"Rou Bao Bu Chi Rou", "Arthur Connan Doyle", "Mo Xiang Tong Xiu", "Cassandra Clare"};
-        int[] SeitenanzahlListe = {300, 1000};
+        int[] SeitenanzahlListe = {300, 1000}; // Assuming a range of 300 to 1000 pages
         String[] TitelListe = {"The Husky and his white Cat shizun", "Sherlock Holmes", "Mo Dao Zu Shi", "The Mortal Instruments"};
         String[] JahrListe = {"1990", "2020", "2010", "1850", "1890"};
 
@@ -29,18 +23,22 @@ public class Testit {
             mBuchListe.add(newBuch);
         }
 
-        Buch buch = new Buch("MDZS", "STH", 3, "Fanfiction", "1900", maxBuchRegal: 8);
-        mBuchListe.add(buch);
-
-        Regal regal = new Regal(400, "FU 3 6969", 10, 8, 100);
+        Buch buch = new Buch("MDZS", "STH", 3, "Fanfiction", "1900");
+        Regal regal = new Regal(400, "FU 3 6969", 10, 8, 100); // Assuming MaxBuchRegal is initialized to 100
         regal.getInfo();
+
+        if (mBuchListe.size() < regal.getMaxBuchRegal()) {
+            mBuchListe.add(buch);
+            System.out.println("Buch hinzugefügt: " + buch.getTitel());
+        } else {
+            System.out.println("Das Buchregal hält nicht mehr als " + regal.getMaxBuchRegal() + " aus");
+        }
 
         for (Buch k : mBuchListe) {
             k.getInfo();
             regal.addBuch(k);
         }
 
-        int maxBuchRegal = regal.getMaxBuchRegal();
-        System.out.println("Maximale Anzahl von Büchern im Regal: " + maxBuchRegal);
+        regal.getBuch();
     }
 }
