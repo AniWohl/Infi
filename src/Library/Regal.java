@@ -65,20 +65,13 @@ public class Regal {
     }
 
     public void addBuch(Buch buch) {
-        int maxBuchRegalRange = 40; // Ändere dies auf die gewünschte maximale Anzahl
-        int minBuchRegalRange = 10; // Ändere dies auf die gewünschte minimale Anzahl
-
-        if (buchliste.size() < this.maxBuchRegal && this.platz >= 100 && this.platz <= 400) {
+        if (buchliste.size() <= this.maxBuchRegal) {
             buchliste.add(buch);
-            if (buchliste.size() == maxBuchRegalRange) {
-                System.out.println("Maximale Anzahl von Büchern im Regal erreicht: " + maxBuchRegalRange);
-            }
         } else {
-            System.out.println("Das Buchregal hält nicht mehr als " + this.maxBuchRegal + " aus " +
-                    "und der Platz im Regal muss zwischen 100 und 400 liegen.");
+            System.out.println("Das Buchregal hält nicht mehr als " + this.maxBuchRegal + " aus");
         }
-    }
 
+    }
 
     public void getBuch() {
         for (Buch k : buchliste) {
