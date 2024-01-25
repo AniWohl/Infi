@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Testit {
+    private static int ci;
+    private static int ni;
+    private static int fi;
+    private static int oi;
+    private static int ai;
+
     public static void main(String[] args) {
         Random r = new Random();
         ArrayList<Buch> mBuchListe = new ArrayList<>();
@@ -33,8 +39,6 @@ public class Testit {
             k.getInfo(); // Use the getInfo method to print information about each book
             regal.addBuch(k);
         }
-
-        regal.getBuch(); // Print information about books in the bookshelf
 
         int maxBuchRegal = regal.getMaxBuchRegal();
         System.out.println("Maximale Anzahl von Büchern im Regal: " + maxBuchRegal);
