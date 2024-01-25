@@ -13,9 +13,8 @@ public class Testit {
     private static int fi;
     private static int oi;
     private static int ai;
-    private String Genre;
 
-    public void main(String[] args) {
+    public static void main(String[]args) {
         Random r = new Random();
         ArrayList<Buch> mBuchListe = new ArrayList();
         String[] GenreListe = new String[0];
@@ -40,10 +39,10 @@ public class Testit {
         }
 
 
-        Buch buch2 = new Buch("nette", "nackte", 5, "rosa", "Sphinx");
-        mBuchListe.add(buch2);
-        int maxkatzenalter;
+        Buch buch = new Buch("nette", "nackte", 5, "rosa", "Sphinx");
+        mBuchListe.add(buch);
         Regal regal = new Regal(400, "FU 3 6969", 10, 8);
+        Regal.getInfo();
 
 
         for (Buch k : mBuchListe) {
