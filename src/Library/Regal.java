@@ -10,6 +10,7 @@ public class Regal {
 
     private int maxSeiten;
     private ArrayList<Buch> buchliste;
+    private int MaxBuchRegal;
 
     public int getMaxBuchRegal() {
         return MaxBuchRegal;

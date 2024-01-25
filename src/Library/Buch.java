@@ -19,6 +19,9 @@ public class Buch {
         this.Jahr = Jahr;
     }
 
+    public static void addbuch(Buch k) {
+    }
+
     public String getGenre() {
         return Genre;
     }
@@ -62,6 +65,9 @@ public class Buch {
     public void getInfo() {
         System.out.println("Das Genre des Buches "+ this.Genre + " von dem Autor " + this.Autor + " hat den Namen "
                 + this.Titel + " und ist insgesamt " + this.Seitenanzahl + " lang. Es erschien " + this.Jahr);
+    }
+
+    public void getMaxBuchRegal() {
     }
 }
 
