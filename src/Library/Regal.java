@@ -11,7 +11,6 @@ public class Regal {
     private int maxBuchRegal;
     private ArrayList<Buch> buchliste;
 
-
     public Regal(int platz, String ort, int anzahlRegale, int maxBuch, int maxSeiten) {
         this.platz = platz;
         this.ort = ort;
@@ -19,6 +18,7 @@ public class Regal {
         this.maxBuch = maxBuch;
         this.maxSeiten = maxSeiten;
         this.buchliste = new ArrayList<>();
+        this.maxBuchRegal = 20; // Setze die maximale Anzahl an Büchern im Regal auf 20
     }
 
     public int getPlatz() {
@@ -66,7 +66,7 @@ public class Regal {
     }
 
     public void addBuch(Buch buch) {
-        if (buchliste.size() <= this.maxBuchRegal) {
+        if (buchliste.size() < this.maxBuchRegal) {
             buchliste.add(buch);
         } else {
             System.out.println("Das Buchregal hält nicht mehr als " + this.maxBuchRegal + " aus");

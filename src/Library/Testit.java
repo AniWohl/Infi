@@ -9,7 +9,7 @@ public class Testit {
         ArrayList<Buch> mBuchListe = new ArrayList<>();
         String[] GenreListe = {"Danmei", "Fantasy", "Horror", "Detektive"};
         String[] AutorListe = {"Rou Bao Bu Chi Rou", "Arthur Connan Doyle", "Mo Xiang Tong Xiu", "Cassandra Clare"};
-        int[] SeitenanzahlListe = {300, 1000}; // Assuming a range of 300 to 1000 pages
+        int[] SeitenanzahlListe = {300, 1000}; // Annahme eines Bereichs von 300 bis 1000 Seiten
         String[] TitelListe = {"The Husky and his white Cat shizun", "Sherlock Holmes", "Mo Dao Zu Shi", "The Mortal Instruments"};
         String[] JahrListe = {"1990", "2020", "2010", "1850", "1890"};
 
@@ -24,7 +24,7 @@ public class Testit {
         }
 
         Buch buch = new Buch("MDZS", "STH", 3, "Fanfiction", "1900");
-  Regal regal = new Regal(400, "FU 3 6969", 10, 8, 100);
+        Regal regal = new Regal(400, "FU 3 6969", 10, 8, 100);
 
         regal.getInfo();
 
@@ -43,3 +43,4 @@ public class Testit {
         regal.getBuch();
     }
 }
+
