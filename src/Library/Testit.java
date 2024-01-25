@@ -4,13 +4,6 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Testit {
-    private static Buch buch;
-    private static int ci;
-    private static int ni;
-    private static int fi;
-    private static int oi;
-    private static int ai;
-
     public static void main(String[] args) {
         Random r = new Random();
         ArrayList<Buch> mBuchListe = new ArrayList<>();
@@ -26,7 +19,8 @@ public class Testit {
             int fi = r.nextInt(SeitenanzahlListe[1] - SeitenanzahlListe[0] + 1) + SeitenanzahlListe[0];
             int oi = r.nextInt(TitelListe.length);
             int ai = r.nextInt(JahrListe.length);
-            mBuchListe.add(new Buch(GenreListe[ci], AutorListe[ni], fi, TitelListe[oi], JahrListe[ai]));
+            Buch newBuch = new Buch(TitelListe[oi], AutorListe[ni], fi, GenreListe[ci], JahrListe[ai]);
+            mBuchListe.add(newBuch);
         }
 
         Buch buch = new Buch("nette", "nackte", 5, "rosa", "Sphinx");
@@ -36,12 +30,11 @@ public class Testit {
         regal.getInfo();
 
         for (Buch k : mBuchListe) {
-            System.out.println("Das Genre des Buches " + k.getGenre() + " von dem Autor " + k.getAutor() +
-                    " hat den Namen " + k.getTitel() + " und ist insgesamt " + k.getSeitenanzahl() +
-                    " lang. Es erschien " + k.getJahr());
-
+            k.getInfo(); // Use the getInfo method to print information about each book
             regal.addBuch(k);
         }
+
+        regal.getBuch(); // Print information about books in the bookshelf
 
         int maxBuchRegal = regal.getMaxBuchRegal();
         System.out.println("Maximale Anzahl von Büchern im Regal: " + maxBuchRegal);

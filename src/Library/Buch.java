@@ -1,73 +1,74 @@
 package Library;
 
+import java.util.ArrayList;
+
 public class Buch {
-        private String Genre;
-        private String Autor;
-        private int Seitenanzahl;
-        private String Titel;
-        private String Jahr;
+    private String Genre;
+    private String Autor;
+    private int Seitenanzahl;
+    private String Titel;
+    private String Jahr;
 
-
-    public Buch(String titel, String autor, int seiten, String genre, String s) {
+    public Buch(String titel, String autor, int seiten, String genre, String jahr) {
+        this.Titel = titel;
+        this.Autor = autor;
+        this.Seitenanzahl = seiten;
+        this.Genre = genre;
+        this.Jahr = jahr;
     }
 
-    public Buch(String titel, String autor, int seiten, String genre, int jahr) {
-        this.Genre = Genre;
-        this.Autor = Autor;
-        this.Seitenanzahl = Seitenanzahl;
-        this.Titel = Titel;
-        this.Jahr = Jahr;
-    }
-
-    public static void addbuch(Buch k) {
+    public void addbuch(Buch book, ArrayList<Buch> bookCollection) {
+        bookCollection.add(book);
     }
 
     public String getGenre() {
         return Genre;
     }
 
-    public void setGenre(String Genre) {
-        this.Genre = Genre;
+    public void setGenre(String genre) {
+        this.Genre = genre;
     }
 
     public String getAutor() {
         return Autor;
     }
 
-    public void setAutor(String Autor) {
-        this.Autor = Autor;
+    public void setAutor(String autor) {
+        this.Autor = autor;
     }
 
     public int getSeitenanzahl() {
         return Seitenanzahl;
     }
 
-    public void setSeitenanzahl(int Seitenanzahl) {
-        this.Seitenanzahl = Seitenanzahl;
+    public void setSeitenanzahl(int seitenanzahl) {
+        this.Seitenanzahl = seitenanzahl;
     }
 
     public String getTitel() {
         return Titel;
     }
 
-    public void setTitel(String Titel) {
-        this.Titel = Titel;
+    public void setTitel(String titel) {
+        this.Titel = titel;
     }
 
     public String getJahr() {
         return Jahr;
     }
 
-    public void setJahr(String Jahr) {
-        this.Jahr = Jahr;
+    public void setJahr(String jahr) {
+        this.Jahr = jahr;
     }
 
     public void getInfo() {
-        System.out.println("Das Genre des Buches "+ this.Genre + " von dem Autor " + this.Autor + " hat den Namen "
-                + this.Titel + " und ist insgesamt " + this.Seitenanzahl + " lang. Es erschien " + this.Jahr);
+        System.out.println("Das Genre des Buches " + this.Genre + " von dem Autor " + this.Autor +
+                " hat den Namen " + this.Titel + " und ist insgesamt " + this.Seitenanzahl +
+                " lang. Es erschien " + this.Jahr);
     }
 
-    public void getMaxBuchRegal() {
+    public int getMaxBuchRegal() {
+        // Placeholder implementation; you need to define how to get the maximum allowed books in a shelf
+        return 0;
     }
 }
-
