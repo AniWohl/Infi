@@ -3,9 +3,6 @@ package Library;
 import java.util.ArrayList;
 import java.util.Random;
 
-import static Library.Buch.*;
-import static Library.Regal.*;
-
 public class Testit {
     private static Buch buch;
     private static int ci;
@@ -14,46 +11,39 @@ public class Testit {
     private static int oi;
     private static int ai;
 
-    public static void main(String[]args) {
+    public static void main(String[] args) {
         Random r = new Random();
-        ArrayList<Buch> mBuchListe = new ArrayList();
-        String[] GenreListe = new String[0];
-        String[] AutorListe = new String[0];
-        int[] SeitenanzahlListe = new int[0];
-        String[] TitelListe = new String[0];
-        String[] JahrListe = new String[0];
-        buch = new Buch(GenreListe[ci], AutorListe[ni], SeitenanzahlListe[fi], TitelListe[oi], JahrListe[ai]);
-        GenreListe = new String[]{"Danmei", "Fantasy", "Horror", "Detektive"};
-        AutorListe = new String[]{"Rou Bao Bu Chi Rou", "Arthur Connan Doyle", "Mo Xiang Tong Xiu", "Cassandra Clare"};
-        SeitenanzahlListe = new int[]{300 - 1000};
-        TitelListe = new String[]{"The Husky and his white Cat shizun", "Sherlock Holmes", "Mo Dao Zu Shi", "The Mortal Instruments"};
-        JahrListe = new String[]{"1990", "2020", "2010", "1850", "1890"};
+        ArrayList<Buch> mBuchListe = new ArrayList<>();
+        String[] GenreListe = {"Danmei", "Fantasy", "Horror", "Detektive"};
+        String[] AutorListe = {"Rou Bao Bu Chi Rou", "Arthur Connan Doyle", "Mo Xiang Tong Xiu", "Cassandra Clare"};
+        int[] SeitenanzahlListe = {300, 1000}; // Assuming a range of 300 to 1000 pages
+        String[] TitelListe = {"The Husky and his white Cat shizun", "Sherlock Holmes", "Mo Dao Zu Shi", "The Mortal Instruments"};
+        String[] JahrListe = {"1990", "2020", "2010", "1850", "1890"};
+
         for (int i = 1; i <= 100; i++) {
-
-            int ci = r.nextInt(GenreListe.length - 1 - 0) + 0;
-            int ni = r.nextInt(AutorListe.length - 1 - 0) + 0;
-            int fi = r.nextInt(SeitenanzahlListe.length - 1 - 0) + 0;
-            int oi = r.nextInt(TitelListe.length - 1 - 0) + 0;
-            int ai = r.nextInt(JahrListe.length - 1 - 0) + 0;
-            mBuchListe.add(new Buch(GenreListe[ci], AutorListe[ni], SeitenanzahlListe[fi], TitelListe[oi], JahrListe[ai]));
+            int ci = r.nextInt(GenreListe.length);
+            int ni = r.nextInt(AutorListe.length);
+            int fi = r.nextInt(SeitenanzahlListe[1] - SeitenanzahlListe[0] + 1) + SeitenanzahlListe[0];
+            int oi = r.nextInt(TitelListe.length);
+            int ai = r.nextInt(JahrListe.length);
+            mBuchListe.add(new Buch(GenreListe[ci], AutorListe[ni], fi, TitelListe[oi], JahrListe[ai]));
         }
-
 
         Buch buch = new Buch("nette", "nackte", 5, "rosa", "Sphinx");
         mBuchListe.add(buch);
-        Regal regal = new Regal(400, "FU 3 6969", 10, 8);
-        Regal.getInfo();
 
+        Regal regal = new Regal(400, "FU 3 6969", 10, 8, 100); // Assuming MaxBuchRegal is initialized to 100
+        regal.getInfo();
 
         for (Buch k : mBuchListe) {
-            System.out.println("Das Genre des Buches " + this.Genre + " von dem Autor " + this.Autor + " hat den Namen "
-                    + this.Titel + " und ist insgesamt " + this.Seitenanzahl + " lang. Es erschien " + this.Jahr);
+            System.out.println("Das Genre des Buches " + k.getGenre() + " von dem Autor " + k.getAutor() +
+                    " hat den Namen " + k.getTitel() + " und ist insgesamt " + k.getSeitenanzahl() +
+                    " lang. Es erschien " + k.getJahr());
 
-            addbuch(k);
+            regal.addBuch(k);
         }
-        buch.getMaxBuchRegal();
+
+        int maxBuchRegal = regal.getMaxBuchRegal();
+        System.out.println("Maximale Anzahl von Büchern im Regal: " + maxBuchRegal);
     }
-
 }
-
-
